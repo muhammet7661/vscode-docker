@@ -1,7 +1,8 @@
 // Place your settings in this file to overwrite default and user settings.
 {
 	"files.exclude": {
-		"out": false // set this to true to hide the "out" folder with the compiled JS files
+		"out": false,
+		"/c:/Users/muhammetcan/Documents/GitHub/vscode-docker": true
 	},
 	"search.exclude": {
 		"out": true,
@@ -20,5 +21,9 @@
 		"typescript"
 	],
 	"typescript.tsdk": "node_modules/typescript/lib",
-	"typescript.preferences.importModuleSpecifier": "relative"
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"workspace.exclude": {
+		"out": false,
+		"/c:/Users/muhammetcan/Documents/GitHub/vscode-docker": true
+	}
 }
