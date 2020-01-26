@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "vscode-docker",
     "version": "0.10.0",
     "preview": true,
@@ -11,6 +12,60 @@
     "extensionKind": [
         "workspace",
         "ui"
+=======
+  "name": "vscode-docker",
+  "version": "0.0.14",
+  "publisher": "PeterJausovec",
+  "displayName": "Docker",
+  "description": "Adds syntax highlighting, snippets, commands, hover tips, and linting for Dockerfile and docker-compose files.",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "icon": "images/docker_icon.svg",
+  "aiKey": "AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217",
+  "galleryBanner": {
+    "color": "#5c2d91",
+    "theme": "dark"
+  },
+  "categories": [
+    "Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "docker",
+    "compose",
+    "container"
+  ],
+  "repository": {
+    "url": "https://github.com/microsoft/vscode-docker.git"
+  },
+  "homepage": "https://github.com/Microsoft/vscode-docker/blob/master/README.md",
+  "activationEvents": [
+    "onLanguage:dockerfile",
+    "onLanguage:yaml",
+    "onCommand:vscode-docker.image.build",
+    "onCommand:vscode-docker.image.remove",
+    "onCommand:vscode-docker.image.push",
+    "onCommand:vscode-docker.image.tag",
+    "onCommand:vscode-docker.container.start",
+    "onCommand:vscode-docker.container.start.interactive",
+    "onCommand:vscode-docker.container.start.azurecli",
+    "onCommand:vscode-docker.container.stop",
+    "onCommand:vscode-docker.container.show-logs",
+    "onCommand:vscode-docker.container.open-shell",
+    "onCommand:vscode-docker.compose.up",
+    "onCommand:vscode-docker.compose.down",
+    "onCommand:vscode-docker.configure",
+    "onCommand:vscode-docker.debug.configureLaunchJson",
+    "onCommand:vscode-docker.deploy",
+    "onCommand:vscode-docker.system.prune"
+  ],
+  "main": "./out/dockerExtension",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "dockerfile",
+        "path": "./snippets/dockerfile.json"
+      }
+>>>>>>> origin/chrisdias/deploy
     ],
     "galleryBanner": {
         "color": "#1289B9",
@@ -1967,6 +2022,7 @@
             ]
         }
     },
+<<<<<<< HEAD
     "engines": {
         "vscode": "^1.40.0"
     },
@@ -2053,3 +2109,109 @@
         "xml2js": "^0.4.22"
     }
 }
+=======
+    "commands": [
+      {
+        "command": "vscode-docker.configure",
+        "title": "Docker: Add docker files to workspace",
+        "description": "Add Dockerfile, docker-compose.yml files"
+      },
+      {
+        "command": "vscode-docker.image.build",
+        "title": "Docker: Build Image",
+        "description": "Build a Docker image from a Dockerfile"
+      },
+      {
+        "command": "vscode-docker.image.remove",
+        "title": "Docker: Remove Images",
+        "description": "Remove a Docker image"
+      },
+      {
+        "command": "vscode-docker.image.tag",
+        "title": "Docker: Tag Image",
+        "description": "Tag a Docker image"
+      },
+      {
+        "command": "vscode-docker.container.start",
+        "title": "Docker: Run",
+        "description": "Starts a container from an image"
+      },
+      {
+        "command": "vscode-docker.container.start.interactive",
+        "title": "Docker: Run Interactive",
+        "description": "Starts a container from an image and runs it interactively"
+      },
+      {
+        "command": "vscode-docker.container.start.azurecli",
+        "title": "Docker: Azure CLI",
+        "description": "Starts a container from the Azure CLI image and runs it interactively"
+      },
+      {
+        "command": "vscode-docker.container.stop",
+        "title": "Docker: Stop",
+        "description": "Stop a running container"
+      },
+      {
+        "command": "vscode-docker.container.show-logs",
+        "title": "Docker: Show Logs",
+        "description": "Show the logs of a running container"
+      },
+      {
+        "command": "vscode-docker.container.open-shell",
+        "title": "Docker: Attach Shell to a running container",
+        "description": "Open a terminal with an interactive shell for a running container"
+      },
+      {
+        "command": "vscode-docker.compose.up",
+        "title": "Docker: Compose Up",
+        "description": "Starts a composition of containers"
+      },
+      {
+        "command": "vscode-docker.compose.down",
+        "title": "Docker: Compose Down",
+        "description": "Stops a composition of containers"
+      },
+      {
+        "command": "vscode-docker.image.push",
+        "title": "Docker: Push",
+        "description": "Push an image to a registry"
+      },
+      {
+        "command": "vscode-docker.system.prune",
+        "title": "Docker: System Prune",
+        "description": "Removes unused data"
+      },
+      {
+        "command": "vscode-docker.deploy",
+        "title": "Docker: Deploy to Azure",
+        "description": "Deploy the Image to Azure App Services"
+      }
+    ]
+  },
+  "engines": {
+    "vscode": "^1.9.0"
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "extensionDependencies": [
+    "vscode.docker",
+    "vscode.yaml"
+  ],
+  "devDependencies": {
+    "vscode": "^1.0.0",
+    "typescript": "^2.1.5",
+    "@types/node": "^6.0.40"
+  },
+  "dependencies": {
+    "dockerfile_lint": "^0.2.6",
+    "dockerode": "^2.3.2",
+    "vscode-extension-telemetry": "^0.0.6",
+    "jmespath": "^0.15.0",
+    "copy-paste": "^1.3.0",
+    "open": "^0.0.5"
+  }
+}
+>>>>>>> origin/chrisdias/deploy
